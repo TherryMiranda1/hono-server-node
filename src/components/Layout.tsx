@@ -1,10 +1,13 @@
+import { Style } from "hono/css"
 import { html } from "hono/html"
+import { globalClass } from "../styles"
+import { Navbar } from "./Navbar/Navbar"
 
 interface SiteData {
-    title: string
-    description: string
-    image: string
-    children?: any
+  title: string
+  description: string
+  image: string
+  children?: any
 }
 const HtmlLayout = (props: SiteData) => html`
   <html>
@@ -25,9 +28,13 @@ const HtmlLayout = (props: SiteData) => html`
   `
 
 export const Layout = (props: { siteData: SiteData; component: JSX.Element }) => (
-    <HtmlLayout {...props.siteData}>
-        <main class={}>
-            {props.component}
-        </main>
-    </HtmlLayout>
+  <HtmlLayout {...props.siteData}>
+    <main class={globalClass}>
+      <head>
+        <Style />
+      </head>
+      <Navbar />
+      {props.component}
+    </main>
+  </HtmlLayout>
 )

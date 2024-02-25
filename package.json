@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "wrangler dev --live-reload src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.tsx"
+    "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
     "hono": "^4.0.5",

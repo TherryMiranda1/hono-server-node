@@ -35,6 +35,13 @@ h1, h2 {
 p {
   margin-bottom: 20px;
 }
+img {
+    width:350px;
+  max-width: 100%;
+  object-fit: cover;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 12px;
+}
 
 button {
   padding: 10px 20px;
