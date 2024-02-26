@@ -1,11 +1,11 @@
 {
+  "type": "module",
   "scripts": {
-    "dev": "wrangler dev --live-reload src/index.ts",
+    "dev": "wrangler dev --live-reload src/index.ts --port 8786",
     "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
-    "hono": "^4.0.5",
-    "react-icons": "^5.0.1"
+    "hono": "^4.0.5"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240208.0",
